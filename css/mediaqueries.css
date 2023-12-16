@@ -28,6 +28,7 @@
     }
     .about {
         grid-template-columns: 1fr;
+        padding: 80px 3% 60px;
     }
     .about-img {
         text-align: center;
