@@ -1,0 +1,480 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+/* General css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Merriweather, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #152b53;
+    --text-color: #ffffff;
+    /* --main-color: #eb4a4a; */
+    --main-color: #db4b4b;
+    --second-color: #1e3f7b;
+    --other-color: #eaeae2;
+    --h1-font: 4.8rem;
+    --h2-font: 3rem;
+    --p-font: 1.5rem;
+    --btn-font: 1.1rem;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 20px;
+    border-radius: 0.5rem;
+    font-size: var(--btn-font);
+    font-weight: 500;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: 1px solid var(--main-color);
+    transition: all .40s ease;
+    box-shadow: 0px 2px 6px var(--text-color);
+}
+
+.btn:hover {
+    transform: scale(1.01) translateY(-5px);
+    background-color: transparent;
+}
+
+/* Sections */
+section {
+    padding: 160px 16% 90px;
+}
+
+/* Header */
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    padding: 22px 16%;
+    /* box-shadow: 0px 2px 3px  var(--main-color); */
+    transition: all .40s ease;
+}
+
+/* logo */
+.logo img {
+    width: 135px;
+    height: auto;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+}
+
+.navbar a{
+    color: var(--other-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    padding: 10px 25px;
+    margin: 0 2px;
+    border-radius: 0.5rem;
+    transition: all .40s ease;
+}
+
+.navbar a:hover {
+    border-top: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+#menu-icon {
+    font-size: 30px;
+    color: var(--main-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+header.sticky {
+    padding: 10px 20px;
+    background-color: var(--bg-color);
+    box-shadow: 0px 2px 3px  var(--main-color);
+}
+
+/* Home */
+.home {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(-180deg,rgba(21,43,83, 0.5), rgba(0,0,0,0.6)), url(../assets/bg-img.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.home-text h1 {
+    margin: 20px 0;
+    font-size: var(--h1-font);
+    font-weight: bold;
+    font-family: Poppins, sans-serif;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-text h4 {
+    color: var(--main-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+}
+
+.home-text h3 {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.btn1 {
+    margin-right: 10px;
+}
+
+/* About */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--second-color);
+}
+
+.about-text h4 {
+    margin: 10px 0;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.about-text h2 {
+    font-size: var(--h2-font);
+}
+
+.about-text p {
+    color: var(--other-color);
+    font-size: var(--btn-font);
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.about-info h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.about-img img {
+    height: auto;
+    width: 100%;
+    max-width: 560px;
+}
+
+/* Services */
+.main-text {
+    text-align: center;
+}
+
+.main-text h2 {
+    font-size: var(--h2-font);
+    margin-bottom: 10px;
+}
+
+.main-text h4 {
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.box {
+    height: 350px;
+    padding: 35px;
+    background-color: var(--second-color);
+    border-top: 5px solid transparent;
+    border-radius: 0.5rem;
+    transition: all .40s ease;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px var(--main-color);
+}
+
+.box:hover {
+    transform: scale(1.01) translate(-5px);
+    border-top: 5px solid var(--main-color);
+}
+
+.box img {
+    width: 200px;
+}
+
+.box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 15px 0;
+    transition: all .40s ease;
+    text-decoration: underline;
+    text-decoration-color: var(--main-color);
+    text-underline-offset: .3rem;
+}
+
+.box:hover h3 {
+    color: var(--main-color);
+}
+
+.box p {
+    color: var(--other-color);
+    font-size: var(--btn-font);
+    line-height: 30px;
+}
+
+/* Projects */
+.projects {
+    background-color: var(--second-color);
+}
+
+.projects-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.row img {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid var(--main-color);
+    border-top: 2px solid var(--main-color);
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.row {
+    padding: 25px;
+    background-color: var(--bg-color);
+    border-radius: 0.5rem;
+    transition: all .40s ease;
+    box-shadow: 3px 3px 6px var(--main-color);
+}
+
+.main-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.row h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.row h6 {
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.row-icon i {
+    font-size: 21px;
+}
+
+.row:hover {
+    border-top: 5px solid var(--main-color);
+    transform: scale(1.01) translateY(-5px);
+    transition: all .40s ease;
+    cursor: pointer;
+}
+
+.row:hover h3 {
+    color: var(--main-color);
+}
+
+.row .btn {
+    padding: 5px 10px;
+    float: right;
+    margin-top: 20px;
+    font-size: .9rem;
+}
+
+.row .btn1{
+    float: left;
+}
+
+/* Contact */
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+}
+
+.contact-text h4{
+    margin: 15px 0;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text h2 {
+    font-size: var(--h2-font);
+}
+
+.contact-text p {
+    color: var(--other-color);
+    font-size: var(--btn-font);
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.contact-list {
+    margin-bottom: 3rem;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-list li a {
+    display: block;
+    color: var(--other-color);
+    font-size: var(--btn-font);
+    font-weight: 600;
+    transition: all .40s ease;
+}
+
+.contact-list li a:hover {
+    transform: scale(1.01) translateY(-5px);
+    color: var(--main-color);
+}
+
+.contact-icons i {
+    height: 40px;
+    width: 40px;
+    background-color: var(--second-color);
+    border-radius: 0.5rem;
+    color: var(--main-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: all .40s ease;
+}
+
+.contact-icons i:hover {
+    transform: scale(1.01) translateY(-5px);
+    color: var(--text-color);
+    background-color: var(--main-color);
+}
+
+.contact-form form {
+    position: relative;
+}
+
+.contact-form form input, form textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 18px;
+    background-color: var(--second-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.contact-form form input:hover, form textarea:hover {
+    transform: scale(1.01) translate(-5px);
+    border-top: 2px solid var(--main-color);
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 220px;
+}
+
+.contact-form form ::placeholder {
+    font-size: .9rem;
+    letter-spacing: 1px;
+    color: var(--other-color);
+}
+
+.contact-form form .send {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 3px 3px 3px var(--second-color);
+    transition: all .40s ease;
+    cursor: pointer;
+}
+
+.contact-form form .send:hover {
+    background-color: var(--second-color);
+    box-shadow: 3px 3px 3px var(--main-color);
+    border-top: 0;
+}
+
+footer {
+    background-color: var(--second-color);
+}
+
+footer p {
+    padding: 15px;
+    color: var(--other-color);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+footer p span {
+    color: var(--main-color);
+}
