@@ -42,8 +42,8 @@
     :root {
         --h1-font: 4rem;
         --h2-font: 2.3rem;
-        --p-font: 1.1rem;
-        --btn-font: .9rem;
+        --p-font: 1.2rem;
+        --btn-font: 1rem;
     }
     section {
         padding: 130px 3% 60px;
